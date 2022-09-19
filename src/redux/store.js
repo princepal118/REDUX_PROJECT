@@ -1,0 +1,13 @@
+import { legacy_createStore } from "redux";
+
+import reducers from './reducers/index'
+
+
+// const store = createStore(todos, ['Use Redux'])
+
+// createrStore takes the first argument reducers and second  is the state
+
+
+const store = legacy_createStore(reducers, {}, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+export default store
