@@ -1,8 +1,5 @@
 //reducer takes the initial state and the action
-
 import { ActionTypes } from "../constants/action-types";
-
-
 const initalState = {
     products: [
         {
@@ -13,12 +10,14 @@ const initalState = {
         
     ]
 }
-export const productReducer = (state, {type,payload}) => {
-    // console.log('action', action)
+
+export const productReducer = (state= initalState, {type,payload}) => {
+    // console.log('initalState ==============>>>', initalState)
+
+    // console.log('type ==============>>>', type)
 
     switch (type) {
         case ActionTypes.SET_PRODUCTS:
-            
            return state
     
         default:
